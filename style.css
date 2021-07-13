@@ -1,0 +1,145 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow: auto;
+}
+
+.header {
+    display: flex;
+    height: 700px;
+   /*  width: 100%; */
+    background:#352da5;
+    justify-content: center;
+    align-items: center;
+    transition: background 2s ease-in-out;
+}
+.header:hover {
+    background:cornflowerblue;
+}
+.header-content {
+    width: 485px;
+    height: 230px;
+    margin: 0px 5rem 5rem 0;
+    
+    
+}
+.header-content-heading {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 5rem;
+    color: #fff;
+    margin: 0;
+    margin-bottom:3rem;
+    
+
+}
+
+.header-content-button {
+    text-decoration: none;
+    color: rgb(251, 251, 251);
+    background: #E02C6D;
+    padding: 10px 24px;
+    font-size: 1.5rem;
+    
+
+}
+.header-content-button:hover {
+    color: #E02C6D;
+    background: rgb(251, 251, 251);
+    animation: pulse 3s ease-out infinite;
+}
+
+@keyframes pulse {
+   0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+   25% {
+        opacity: 0.25;
+        transform: translateY(30px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(60px);
+    }
+    75% {
+        opacity: 0.25;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.fa-arrow-right {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.header-banner {
+    width: 33rem;
+    height: 28rem;
+    padding: 20px;
+}
+main {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.players {
+    margin-top: 4.1rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1.3rem;
+
+}
+.player {
+    background:#fbf2f2;
+    padding: .8rem;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.157);
+
+}
+.player-image {
+    width: 300px;
+    height: 256px;
+    
+}
+.player-name {
+    font-size:1.8rem;
+    font-weight:700;
+    margin: 10px 0px;
+}
+.player-description {
+    color: #6C6C6C;
+}
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.icons {
+    margin-bottom: 1.2rem;
+   
+}
+.icons > .fab ,
+.icons > .fas {
+
+    display: inline-block;
+    border-radius: 60px;
+    box-shadow: 0px 0px 2px #888;
+    padding: 0.5em 0.6em;
+    background: rgba(128, 128, 128, 0.486);
+   /*  border-radius: 0.8em; */
+    margin-left: 0.8rem;
+}
+.copyright {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
