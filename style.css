@@ -266,6 +266,9 @@ main {
     .all-news {
         grid-template-columns: 1fr;
     }
+    .ranking-category {
+        text-align: center;
+    }
     .footer-football-logo {
         text-align: center;
         width: 500px;
