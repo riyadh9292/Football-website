@@ -9,7 +9,6 @@ html,body {
 .header {
     display: flex;
     height: 700px;
-   /*  width: 100%; */
     background:#352da5;
     justify-content: center;
     align-items: center;
@@ -129,6 +128,7 @@ main {
 .all-news {
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
 
 }
 .single-news {
@@ -136,12 +136,13 @@ main {
     width: 480px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.157);
     padding: 1rem;
+    border-radius: 1rem;
 }
 
 .news-banner {
     width: 280px;
-    height: 230px;
-    border-radius: 20px;
+    height: 220px;
+    border-radius: 5px;
 }
 
 .news-details {
@@ -159,18 +160,17 @@ main {
 
 
 .World-ranking {
-    display: flex;
-    flex-direction: column;
     margin: 4rem ;
+    padding: 2rem;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.157);
+    border-radius: 20px;
 } 
 
-/* .teams-ranking {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-} */
 
 .ranking-position, .ranking-nations, .ranking-points {
     border-bottom: 5px solid rgb(38, 88, 4);
+    margin-bottom: 2rem;
+    color: black;
 }
 .team {
     display: flex;
@@ -180,25 +180,14 @@ main {
     font-weight: bold;
     color: rgba(0, 0, 0, 0.486);
 }
+.team-position {
+    margin-left: 1rem;
+}
 .ranking-team-flag {
     width: 3rem;
     height: 2rem;
     margin-left: 1rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .footer-section {
     display: flex;
@@ -226,3 +215,65 @@ main {
     margin-bottom: 1rem;
 }
 
+@media (max-width:960px) {
+    .header {
+        flex-direction: column;
+        padding: 4rem 1rem 2rem 1.8rem;
+        height: 100%;
+    }
+    .header-content {
+        width: 70%;
+        height: auto;
+    }
+    .header-banner {
+        width: 90%;
+        height: auto;
+    }
+    .players {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .all-news {
+        grid-template-columns:1fr;
+    }
+    .news-heading {
+        text-align: center;
+    }
+    .footer-football-logo {
+        text-align: center;
+        width: 500px;
+    }
+
+}
+@media (max-width:480px) {
+    .header {
+        padding: 4rem 1rem 0 2rem;
+    }
+    .header-content {
+        width: 270px;
+    }
+    .header-content-heading {
+        font-size:36px;
+        line-height: 50px;
+
+    }
+    .header-banner {
+        width: 330px;
+        height: 280px;
+        margin-top: -3.2rem;
+    }
+    .players {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .all-news {
+        grid-template-columns:1fr;
+        width: 100%;
+    }
+    .news-heading {
+        text-align: center;
+    }
+    .footer-football-logo {
+        text-align: center;
+        width: 500px;
+    }
+
+}
