@@ -6,6 +6,8 @@ html,body {
     overflow: auto;
 }
 
+/* Styling header component */
+
 .header {
     display: flex;
     height: 700px;
@@ -14,9 +16,11 @@ html,body {
     align-items: center;
     transition: background 2s ease-in-out;
 }
+
 .header:hover {
     background:cornflowerblue;
 }
+
 .header-content {
     width: 485px;
     height: 230px;
@@ -24,15 +28,14 @@ html,body {
     
     
 }
+
 .header-content-heading {
     font-size: 4rem;
     font-weight: 700;
     line-height: 5rem;
     color: #fff;
     margin: 0;
-    margin-bottom:3rem;
-    
-
+    margin-bottom: 3rem; 
 }
 
 .header-content-button {
@@ -85,11 +88,18 @@ html,body {
     height: 28rem;
     padding: 20px;
 }
+
+/* End of styling header section  */
+
+/* styles for main section where top players details and latest news are shown */
+
 main {
-    display:flex;
+    display: flex;
     align-items: center;
     flex-direction: column;
 }
+
+/* top players details */
 
 .players {
     margin-top: 4.1rem;
@@ -98,22 +108,24 @@ main {
     grid-gap: 1.3rem;
 
 }
+
 .player {
     background:#fbf2f2;
     padding: .8rem;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.157);
-
 }
+
 .player-image {
     width: 300px;
     height: 256px;
-    
 }
+
 .player-name {
-    font-size:1.8rem;
-    font-weight:700;
+    font-size: 1.8rem;
+    font-weight: 700;
     margin: 10px 0px;
 }
+
 .player-description {
     width: 300px;
     height: 150px;
@@ -121,16 +133,20 @@ main {
     overflow: auto;
 }
 
+/* End of top players details */
+
+/* starting of latest news */
+
 .news-heading {
-    font-size:3rem;
+    font-size: 3rem;
 }
 
 .all-news {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 1rem;
-
 }
+
 .single-news {
     display: flex;
     width: 480px;
@@ -148,30 +164,33 @@ main {
 .news-details {
     margin-left: 0.6rem;
 }
-.news-details small{
+
+.news-details small {
     color: red;
 }
 
 .news-details h1 {
-    font-size:1.6rem;
+    font-size: 1.6rem;
     margin-top: 0;
 }
 
+/* End of latest news */
 
+/* World top five teams */
 
 .World-ranking {
     margin: 4rem ;
     padding: 2rem;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.157);
     border-radius: 20px;
-} 
-
+}
 
 .ranking-position, .ranking-nations, .ranking-points {
     border-bottom: 5px solid rgb(38, 88, 4);
     margin-bottom: 2rem;
     color: black;
 }
+
 .team {
     display: flex;
     justify-content: space-between;
@@ -180,40 +199,49 @@ main {
     font-weight: bold;
     color: rgba(0, 0, 0, 0.486);
 }
+
 .team-position {
     margin-left: 1rem;
 }
+
 .ranking-team-flag {
     width: 3rem;
     height: 2rem;
     margin-left: 1rem;
 }
 
+/* End of top five teams styling */
+
+/* Starting of footer styling */
+
 .footer-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
 }
+
 .icons {
-    margin-bottom: 1.2rem;
-   
+    margin-bottom: 1.2rem; 
 }
+
 .icons > .fab ,
 .icons > .fas {
-
     display: inline-block;
     border-radius: 60px;
     box-shadow: 0px 0px 2px #888;
     padding: 0.5em 0.6em;
     background: rgba(128, 128, 128, 0.486);
-   /*  border-radius: 0.8em; */
     margin-left: 0.8rem;
 }
+
 .copyright {
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
+
+/* End of footer styling */
+
+/* Media query for Tablet */
 
 @media (max-width:960px) {
     .header {
@@ -232,18 +260,20 @@ main {
     .players {
         grid-template-columns: repeat(2,1fr);
     }
-    .all-news {
-        grid-template-columns:1fr;
-    }
     .news-heading {
         text-align: center;
+    }
+    .all-news {
+        grid-template-columns: 1fr;
     }
     .footer-football-logo {
         text-align: center;
         width: 500px;
     }
-
 }
+
+/* Media query for simple mobile device */
+
 @media (max-width:480px) {
     .header {
         padding: 4rem 1rem 0 2rem;
@@ -252,7 +282,7 @@ main {
         width: 270px;
     }
     .header-content-heading {
-        font-size:36px;
+        font-size: 36px;
         line-height: 50px;
 
     }
@@ -264,16 +294,41 @@ main {
     .players {
         grid-template-columns: repeat(1,1fr);
     }
-    .all-news {
-        grid-template-columns:1fr;
-        width: 100%;
-    }
     .news-heading {
         text-align: center;
     }
-    .footer-football-logo {
-        text-align: center;
-        width: 500px;
+    .all-news {
+        grid-template-columns: 1fr; 
     }
-
+    .single-news {
+        flex-direction: column;
+        width: 320px;
+    }
+    .World-ranking {
+        margin: 0;
+        padding: 1rem;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.157);
+        border-radius: 0;
+    } 
+    .ranking-position, .ranking-nations, .ranking-points {
+        font-size: 18px;
+    }
+    .ranking-category {
+        text-align: center;
+    }
+    .team-position , .team-name, .team-score {
+        font-size:1.6rem;
+    }
+    .ranking-team-flag {
+        width: 2.4rem;
+        height: 1.6rem;
+        margin-left: 0.4rem;
+    }
+    .footer-football-logo {
+        width: 250px;
+    }
+    .copyright {
+        font-size: 0.8rem;
+    }
+    
 }
